@@ -6,6 +6,8 @@ import TaskList from '../components/TaskList';
 
 import Header from '../components/Header';
 
+// Array con listado de las tareas
+
 const list = [
   {
     description: "Buy a new gaming laptop",

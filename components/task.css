@@ -1,0 +1,5 @@
+/* Estilo para que las tareas completadas se tachen */
+
+.completed{
+    text-decoration: line-through;
+}
