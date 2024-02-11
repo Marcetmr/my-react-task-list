@@ -12,9 +12,9 @@ function TaskList (prop) {
                 list.map((item) => {
                     return (
                     <>
-                    <Task key={item.description} description={item.description} isCompleted={item.isCompleted} />
-                   <button onClick={(e) => onDeleteTask(item.description)}>🗑️</button>
-                   <button onClick={(e) => onEditTask(item.description)}>✏️</button>
+                    <Task key={item.name} name={item.name} description={item.description} isCompleted={item.isCompleted} />
+                   <button onClick={(e) => onDeleteTask(item.name)}>🗑️</button>
+                   <button onClick={(e) => onEditTask(item.name, item.description)}>✏️</button>
                    <br></br>
                     </>) 
                 })

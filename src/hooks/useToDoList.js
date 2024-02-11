@@ -10,9 +10,10 @@ export function useToDoList () {
       setToDoList(JSON.parse(initialList));
     }, [])
   
-    const handleNewTask = (description) => {
+    const handleNewTask = (item) => {
       const newTask ={
-        description: description,
+        name: item.name,
+        description: item.description,
         isCompleted: false
       };
   
@@ -24,8 +25,8 @@ export function useToDoList () {
   
     }
   
-    const handleDeleteTask = (description) => {
-      const newArray = toDoList.filter(i => i.description !== description);
+    const handleDeleteTask = (name) => {
+      const newArray = toDoList.filter(i => i.name !== name);
   
       setToDoList(newArray);
   
@@ -33,10 +34,19 @@ export function useToDoList () {
   
     }
   
-    const handleEditTask = (description) => {
-      const newDescription = prompt('Input new description');
+    const handleEditTask = (name, description) => {
+      
+      const newName = prompt('Input new name', name);
+
+      if (!newName) return;
+      
+      const newDescription = prompt('Input new description', description);
+
+      if (!newDescription) return;
   
-      const index = toDoList.findIndex(i => i.description === description);
+      const index = toDoList.findIndex(i => i.name === name);
+
+      toDoList[index].name = newName;
   
       toDoList[index].description = newDescription;
   
