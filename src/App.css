@@ -1,0 +1,70 @@
+
+
+/* Importaciones de fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur&family=Khula&family=Libre+Caslon+Text&family=Montserrat:wght@500&family=Playfair+Display&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur&family=Khula&family=Libre+Caslon+Text&family=Montserrat:wght@500&family=Playfair+Display&family=Roboto+Serif:opsz@8..144&family=Roboto:wght@100&display=swap');
+
+/* Estilos en el root */
+
+:root {
+    --header-font: 'Libre Caslon Text', serif;
+    --body-font: 'Roboto Serif';
+    --base-font-size: 14px;
+    --main-text-color: #33322F;
+}
+
+.header {
+    color: var(--main-text-color);
+    font-family: var(--header-font);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#new-task-form {
+    max-width: 800px;
+    margin-left: 25px;
+    padding: 1rem;
+    border: solid 1px #eee;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: var(--main-text-color);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.error {
+    color: red;
+    margin-left: 25px;
+    font-family: var(--body-font);
+}
+
+.list-container {
+    max-width: 800px;
+    margin-top: 50px;
+    margin-left: 25px;
+    padding: 1rem;
+    border: solid 1px #eee;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    color: var(--main-text-color);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.list-buttons {
+    display: flex;
+    justify-content: space-around;
+}

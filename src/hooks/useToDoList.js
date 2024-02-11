@@ -55,5 +55,18 @@ export function useToDoList () {
       localStorage.setItem('toDoList', JSON.stringify(toDoList));
   
     }
-    return [toDoList, handleNewTask, handleDeleteTask, handleEditTask];
+
+    const handleCompleteTask = (name) => {
+
+      const index = toDoList.findIndex(i => i.name === name);
+    
+      toDoList[index].isCompleted = true;
+    
+      setToDoList([...toDoList]);
+      
+          localStorage.setItem('toDoList', JSON.stringify(toDoList));
+    
+    }
+
+    return [toDoList, handleNewTask, handleDeleteTask, handleEditTask, handleCompleteTask];
 }

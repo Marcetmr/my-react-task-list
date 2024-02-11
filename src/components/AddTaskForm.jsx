@@ -62,12 +62,12 @@ function AddTaskForm(props) {
         <div className="error">
             {formValidation.taskName}
         </div>
-        <form onSubmit={onSubmit}>
+        <form className="form" id="new-task-form" onSubmit={onSubmit}>
             <input type="text" value={taskName} onChange={handleTaskNameChange}
-            placeholder='Add new task name' />
+            placeholder='Name' />
             <input type="text" value={taskDescription}
-            onChange={e => setTaskDescription(e.target.value)} placeholder="Add new task description" />
-            <button type="submit" disabled={!isFormValid}>Add</button>
+            onChange={e => setTaskDescription(e.target.value)} placeholder="Description" />
+            <button type="submit" disabled={!isFormValid}>Add New Task</button>
         </form>
     </div>);
 }
