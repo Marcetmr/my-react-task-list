@@ -10,31 +10,6 @@ import AddTaskForm from "./components/AddTaskForm";
 
 import { useToDoList } from "./hooks/useToDoList";
 
-// Array con listado de las tareas
-
-const list = [
-  {
-    name: "Purchases",
-    description: "Buy a new gaming laptop",
-    isCompleted: false,
-  },
-  {
-    name: "Task Manager",
-    description: "Complete a previous task",
-    isCompleted: false,
-  },
-  {
-    name: "Content Creation",
-    description: "Create video for YouTube",
-    isCompleted: true,
-  },
-  {
-    name: "Web Dev Homework",
-    description: "Create a new portfolio site",
-    isCompleted: true,
-  },
-];
-
 function App() {
   const [toDoList, handleNewTask, handleDeleteTask, handleEditTask, handleCompleteTask] = useToDoList();
 
@@ -46,8 +21,6 @@ function App() {
     </div>
   );
 }
-
-
 
 // Exportaciones
 

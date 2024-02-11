@@ -2,12 +2,39 @@
 
 import { useState, useEffect } from "react";
 
+// Array con listado de las tareas
+
+const list = [
+  {
+    name: "Purchases",
+    description: "Buy a new gaming laptop",
+    isCompleted: false,
+  },
+  {
+    name: "Task Manager",
+    description: "Complete a previous task",
+    isCompleted: false,
+  },
+  {
+    name: "Content Creation",
+    description: "Create video for YouTube",
+    isCompleted: true,
+  },
+  {
+    name: "Web Dev Homework",
+    description: "Create a new portfolio site",
+    isCompleted: true,
+  },
+];
+
 export function useToDoList () {
-    const [toDoList, setToDoList] = useState([]);
+    const [toDoList, setToDoList] = useState(list);
 
     useEffect(() => {
       const initialList = localStorage.getItem("toDoList");
-      setToDoList(JSON.parse(initialList));
+
+      if (initialList)
+        setToDoList(JSON.parse(initialList));
     }, [])
   
     const handleNewTask = (item) => {
