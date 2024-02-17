@@ -68,3 +68,9 @@
     display: flex;
     justify-content: space-around;
 }
+
+.demo-video {
+    width: 50% !important;
+    margin: auto;
+    display: block;
+}

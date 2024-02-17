@@ -1,6 +1,6 @@
 
 
-import './task.css'
+import '../task.css'
 
 function Task (prop) {
 
